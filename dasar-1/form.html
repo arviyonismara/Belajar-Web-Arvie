@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>Form</title>
+</head>
+
+<body>
+	<form>
+		<p>Nama : <input type="text" name="" placeholder="Isi nama anda"></p>
+		<!--Attribut Placeholder = untuk memberikan hint pada kolom form-->
+		<p>Jenis kelamin: <input type="radio" name="Gender"> Laki-laki <input type="radio" name="Gender"> Perempuan</p>
+		<!-- kedua name harus sama agar ketika diisikan, tidak menjadi double -->
+		<p>Kota :
+			<select>
+				<!--tag select khusus untuk membuat menu dropdown-->
+				<option value="">Bandung</option>
+				<option value="" selected>Jakarta</option>
+				<!--attribut selected = untuk merubah default pilihan dropdown menjadi yang terpilih di attribut selected-->
+				<option value="">Semarang</option>
+			</select>
+		</p>
+		<p>Pertanyaan :
+			<textarea rows="10" cols="20" placeholder="Isi pertanyaan!"></textarea>
+			<!--elemen textarea untuk inputan panjang-->
+		</p>
+		<p><input type="checkbox" checked> Saya setuju dengan Privacy & policy yang berlaku</p>
+		<!--attribut checked = untuk merubah default checkbox menjadi sudah tercentang-->
+		<button type="submit">Kirim</button>
+	</form>
+</body>
+
+</html>

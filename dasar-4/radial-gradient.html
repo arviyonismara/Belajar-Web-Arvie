@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>radial gradient</title>
+	<style>
+		.satu {
+			width: 600px;
+			height: 300px;
+			margin: 50px auto;
+			background-image: radial-gradient(red, blue);
+		}
+
+		.ellipse {
+			width: 600px;
+			height: 300px;
+			margin: 50px auto;
+			background-image: radial-gradient(ellipse, red, blue);
+		}
+
+		.circle {
+			width: 600px;
+			height: 300px;
+			margin: 50px auto;
+			background-image: radial-gradient(circle, red, blue);
+		}
+
+		.position {
+			width: 600px;
+			height: 300px;
+			margin: 50px auto;
+			background-image: radial-gradient(circle farthest-side at top left, red, blue);
+		}
+
+		.position2 {
+			width: 600px;
+			height: 300px;
+			margin: 50px auto;
+			background-image: radial-gradient(circle closest-side, red, blue);
+		}
+	</style>
+</head>
+
+<body>
+	<div class="satu"></div>
+	<div class="ellipse"></div>
+	<div class="circle"></div>
+	<div class="position"></div>
+	<div class="position2"></div>
+</body>
+
+</html>

@@ -1,0 +1,34 @@
+h1 {
+	font-family: Arial, verdana, sans-serif;
+	color: rgb(30, 70, 202);
+	/*mengatur warna text */
+	text-align: center;
+	/*mengatur letak text (center,justify,left,right)*/
+	font-size: 20px;
+	font-weight: bold;
+	/*font-wight untuk huruf tebal Bold */
+	font-variant: small-caps;
+	/*font-variant untuk merubah hruf awal lebih besar */
+	font-style: italic;
+	/*font-style untuk huruf miring */
+	text-decoration: underline;
+}
+
+p {
+	font-family: 'Courier New', Courier, monospace;
+	line-height: 40px;
+	/*line-height untuk mengatur jarak antar baris paragraf/kalimat */
+	text-align: justify;
+	text-indent: 40px;
+	/*mengatur indentasi paragraf*/
+	text-transform: capitalize;
+	/*mengatur huruf kapital pada teks*/
+	word-spacing: 20px;
+	/*mengatur jarak spasi antar kata*/
+	letter-spacing: 2px;
+	/*mengatur jarak antar huruf pada teks */
+}
+
+a {
+	text-decoration: none;
+}

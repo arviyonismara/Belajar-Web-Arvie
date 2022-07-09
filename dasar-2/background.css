@@ -1,0 +1,9 @@
+body {
+	background-color: darkgrey;
+	background-image: url(bg/tree.png);
+	/*memberikan background gambar*/
+	background-repeat: no-repeat;
+	/*Note : background image secara default akan mengulang kearah x & y untuk memenuhi halaman web. Dengan menggunakan background-repeat, digunakan untuk mengatur pengulangan gambar tersebut.*/
+	background-position: top right;
+	/*untuk mengatur background*/
+}

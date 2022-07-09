@@ -1,0 +1,80 @@
+<html>
+
+<head>
+	<title>Display</title>
+	<style>
+		/*Inline Display*/
+		/*elemen deafult display inline tidak bisa dirubah secara ukuran. ukuran yang hanya sebatas isi dari elemennya dan tidak membuat baris baru.*/
+		/*Contoh */
+		.navigasi a {
+			background-color: pink;
+			width: 100px;
+			height: 50px;
+			/*memberubah panjang dan lebar tidak akan merubah tampilan pada elemen*/
+		}
+
+		/*Inline-block Display*/
+		/*tidak ada elemen yang default displaynya inline-block. Inline-block hanya dapat dirubah secara manual.*/
+		/*Contoh */
+		.navigasi2 a {
+			display: inline-block;
+			background-color: aquamarine;
+			width: 100px;
+			height: 50px;
+		}
+
+		/*Block Display*/
+		/*elemen bertipe default display Block dapat dirubah secara vertical maupun horizontal. Elemen yang dibuat akan membuat baris baru. */
+		/*Contoh */
+		.main {
+			background-color: cadetblue;
+			width: 600px;
+			height: 300px;
+		}
+
+		.main h2 {
+			background-color: cyan;
+			height: 40px;
+		}
+	</style>
+
+</head>
+
+<body>
+	<div class="header">
+		<h1>Selamat Datang di website kami!</h1>
+	</div>
+	<div class="navigasi">
+		<h2>Daftar Link (inline)</h2>
+		<a href="#">Link 1</a>
+		<a href="#">Link 2</a>
+		<a href="#">Link 3</a>
+		<a href="#">Link 4</a>
+		<a href="#">Link 5</a>
+	</div>
+	<div class="navigasi2">
+		<h2>Daftar Link (Inline-block)</h2>
+		<a href="#">Link 1</a>
+		<a href="#">Link 2</a>
+		<a href="#">Link 3</a>
+		<a href="#">Link 4</a>
+		<a href="#">Link 5</a>
+	</div>
+
+	<div class="main">
+		<h2>Judul Artikel</h2>
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+			etdoloremagna
+			aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. <span>Duis aute irure dolor </span>in reprehenderit in voluptate velit esse cillum dolore eu
+			fugiat nulla
+			pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
+			est
+			laborum.</p>
+	</div>
+	<div class="copyright">
+		<p>Copyright Arvie 2022</p>
+	</div>
+</body>
+
+</html>

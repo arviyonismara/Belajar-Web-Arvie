@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Float - Image Galery</title>
+	<!--Image Galery membuat susunan objek berjejer-->
+	<style>
+		.container {
+			width: 600px;
+			border: 2px solid;
+			margin: auto;
+		}
+
+		.kotak {
+			background-color: coral;
+			width: 80px;
+			height: 80px;
+			text-align: center;
+			color: white;
+			line-height: 80px;
+			font-size: 30px;
+			margin: 2px;
+			/* float: left; */
+		}
+
+		.clear {
+			clear: left;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="container">
+		<div class="kotak">1</div>
+		<div class="kotak">2</div>
+		<div class="kotak">3</div>
+		<div class="kotak">4</div>
+		<div class="kotak">5</div>
+		<div class="kotak">6</div>
+		<div class="kotak">7</div>
+		<div class="kotak">8</div>
+		<div class="kotak">9</div>
+		<div class="kotak">10</div>
+		<div class="clear"></div>
+		<!--dengan menggunakan metode clear, paragraf akan terletak dibawah objek kotak, dan kontainer menjadi lebig rapi-->
+		<!--Note: peletakan div clear harus tepat dibawah objek yang ingin di perbaiki. biasanya diatas tulisan/paragraf-->
+		<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Neque consequuntur error odio ex quibusdam, quos
+			beatae? Quo fuga doloribus odio similique cupiditate expedita </p>
+	</div>
+</body>
+
+</html>

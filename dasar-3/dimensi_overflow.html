@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Dimensi dan Overflow</title>
+	<style>
+		/*latihan dimensi*/
+		/*contoh*/
+		.header {
+			background-color: chocolate;
+			width: 300px;
+			height: 200px;
+			margin-bottom: 30px;
+		}
+
+		.header h2 {
+			background-color: antiquewhite;
+			/*value bertipe % tergantung pada parrent class(header) dari cssnya*/
+			width: 80%;
+			height: 30%;
+
+		}
+
+		/*latihan Overflow (untuk mengatur isian yang terlalu panjang*/
+		/*contoh*/
+		.main {
+			background-color: aquamarine;
+			width: 200px;
+			height: 200px;
+			overflow: auto;
+			/*property overflow berfungsi untuk memperbaiki konten yang terlalu panjang dari panjang dan lebar yang sudah ditetapkan pada parrent class(main) dengan memberi scrollbar*/
+		}
+	</style>
+</head>
+
+<body>
+	<div class="header">
+		<h2>Hello World!</h2>
+	</div>
+	<div class="main">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati ut dolorum reprehenderit
+		soluta fugit. Neque totam possimus, doloribus quibusdam consequuntur nobis dolore suscipit soluta eos
+		consequatur fugiat libero rem mollitia. Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque magni rem
+		ullam id animi assumenda commodi ut explicabo veniam. Fugit maiores nam eos accusantium quos alias
+		necessitatibus illo sunt laborum?</div>
+</body>
+
+</html>

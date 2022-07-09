@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Latihan Margin</title>
+	<style>
+		.satu {
+			background-color: green;
+			width: 200px;
+			height: 200px;
+			/*margin: 20px 40px; dibaca (atas bawah)*/
+			/*margin: 30px 40px 50px; dibaca (atas (kanan,kiri) bawah)*/
+			margin: 100px 20px 40px 50px;
+			/*dibaca (atas kanan bawah kiri)*/
+
+		}
+
+		.dua {
+			background-color: aquamarine;
+			width: 100px;
+			height: 100px;
+			margin: 0px auto 0px;
+			/*jika margin kanan,kiri bernilai auto, maka otomatis elemen akan berada di tengah halaman. Note: Auto hanya berlaku pada kanan dan kiri.*/
+		}
+
+		.tiga {
+			background-color: cadetblue;
+			width: 50px;
+			height: 50px;
+			margin: -20px auto 0px;
+			/*margin dengan nilai negatif akan memindah objek ke arah margin yang ditentukan.*/
+		}
+
+		.satu1 {
+			display: inline-block;
+			background-color: blueviolet;
+			width: 50px;
+			height: 50px;
+			margin-right: 20px;
+		}
+
+		.dua2 {
+			display: inline-block;
+			background-color: darkblue;
+			width: 50px;
+			height: 50px;
+			margin-left: 30px;
+		}
+
+		.tiga3 {
+			display: inline-block;
+			background-color: darkmagenta;
+			width: 50px;
+			height: 50px;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="header">
+		<h2>Latihan Margin</h2>
+	</div>
+	<div class="box">
+		<div class="satu">1</div>
+		<div class="dua">2</div>
+		<div class="tiga">3</div>
+	</div>
+
+
+	<div class="satu1">1</div>
+	<div class="dua2">2</div>
+	<div class="tiga3">3</div>
+
+</body>
+
+</html>

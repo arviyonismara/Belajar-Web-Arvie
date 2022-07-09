@@ -1,0 +1,48 @@
+/*Pseudo class dibatasi menggunakan tanda ":"*/
+.hello :link {
+	/*akan bekerja ketika keadaan link*/
+	color: chocolate;
+}
+
+.hello:hover {
+	/*hover akan bekerja ketika kursor berada di link yang diberi hover*/
+	font-family: arial;
+	font-size: 20px;
+	color: crimson;
+}
+
+.hello:active {
+	/*css :active akan berkerja ketika link di klik*/
+	font-style: italic;
+}
+
+.hello:visited {
+	/*:visited hanya akan aktif ketika link sudah ditekan*/
+	color: coral;
+}
+
+li:first-child a {
+	/*memberi css untuk anak dari li yang pertama yaitu a*/
+	color: brown;
+}
+
+li:nth-child(even) a {
+	/*memberi css untuk anak dari li yaitu a yang urutan genap*/
+	color: crimson;
+}
+
+li:nth-child(odd) a:hover {
+	/*memberi css untuk anak dari li yaitu a yang urutan ganjil*/
+	color: green;
+	/*bisa juga ditambahkan pseudo class hover dll khusus untuk anak tertentu*/
+}
+
+p:first-of-type {
+	/*memberi css untuk elemen bertipe p(paragraf) yang pertama*/
+	color: blueviolet;
+}
+
+p:last-of-type {
+	/*memberi css untuk elemen bertipe p(paragraf) yang terakhir*/
+	color: forestgreen;
+}

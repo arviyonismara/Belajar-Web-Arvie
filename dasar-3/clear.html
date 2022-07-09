@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Float - Text Wrapping</title>
+	<!--Clear.-->
+	<style>
+		.container {
+			width: 600px;
+			border: 2px solid;
+			margin: auto;
+			/*overflow: auto; bisa memperbaiki kontainer, tapi tidak tepat*/
+		}
+
+		img {
+			width: 30%;
+			height: 30%;
+			float: left;
+			/*menggunakan property float*/
+		}
+
+		.clear {
+			clear: left;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="container">
+		<img src="img/avengers.png" alt="">
+		<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Neque consequuntur error odio ex quibusdam, quos
+			beatae? Quo fuga doloribus odio similique cupiditate expedita </p>
+		<div class="clear"></div>
+		<!--Metode div kosong class clear memungkinkan untuk membersihkan float-->
+		<!--Note: peletakan div clear harus tepat dibawah objek yang ingin di perbaiki.-->
+		<!--Cara yang lebih tepat lagi bisa mneggunakan metode "micro clearfix" buatan nicollas gallager-->
+	</div>
+</body>
+
+</html>

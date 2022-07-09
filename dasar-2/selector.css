@@ -1,0 +1,47 @@
+body {
+	font-family: arial;
+}
+
+/*
+h1 {
+	color: cornflowerblue;
+}
+
+h2 {
+	color: cornflowerblue;
+}*/
+
+/*metode grouping menggunakan ","*/
+h1,
+h2 {
+	color: chocolate;
+}
+
+ul li a {
+	color: aquamarine;
+}
+
+ol li a {
+	color: burlywood;
+}
+
+/*untuk memberi css pada elemen yang spesifik seperti a dalam list, selector diberi spasi dan selector diatas dibaca dari kanan/ elemen yang paling dalam. Sehingga dibaca "elemen a yang didalam li yang didalam ul" */
+
+#p1 {
+	/* # digunakan untuk selector id Note : id sebaiknya tidak digunakan di css*/
+	color: rgb(25, 164, 164);
+}
+
+.p2 {
+	/* . digunakan untuk selector class */
+	color: darkcyan;
+}
+
+.cetak-tebal {
+	font-weight: bold;
+}
+
+p.cetak-tebal {
+	/* untuk paragraf yang mempunyai class cetak tebal */
+	font-size: 20px;
+}

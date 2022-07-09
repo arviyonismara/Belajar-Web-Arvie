@@ -1,0 +1,10 @@
+body {
+	color: cornflowerblue;
+}
+
+/*pada kasus ini elemen a tidak akan berubah warna, karena by default a berwarna biru.*/
+/*agar elemen a mengikuti apa yang diberikan oleh orang tuanya(body) maka bisa menggunakan value "inherit". Cont*/
+a {
+	color: inherit;
+	/*dengan ini elemen a akan berwarna sama seperti body*/
+}

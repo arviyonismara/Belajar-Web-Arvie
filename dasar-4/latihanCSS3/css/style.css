@@ -1,0 +1,68 @@
+@font-face {
+	font-family: 'BebasNeue';
+	src: url(../fonts/BebasNeue-Regular.woff) format('woff');
+}
+
+body{
+	font: 18px/36px 'BebasNeue', 'Arial Narrow', 'Arial', sans-serif;
+	background-color: rgb(207, 207, 207);
+}
+
+h1{
+	font-size: 80px;
+	margin: 50px 0px;
+	text-align: center;
+	text-shadow: 1px 1px 1px white;
+}
+
+.container{
+	width: 600px;
+	height: auto;
+	margin: auto;
+	padding: 30px;
+	background-color: white;
+	box-shadow: 0 0 3px 3px rgb(0, 0, 0, 0.3);
+	border-radius: 5px;
+}
+
+.gallery li{
+	width: 120px;
+	height: 120px;
+	/* overflow: hidden; */
+	border: 5px solid rgb(82, 82, 82);
+	float: left;
+	margin: 0px 10px 0px;
+	position: relative;
+}
+
+.gallery li, .gallery li span,
+.gallery li img{
+	border-radius: 50%;
+
+}
+
+.gallery li span{
+	display: block;
+	width: 120px;
+	height: 120px;
+	background-color: rgba(145, 145, 145, 0.5);
+	position: absolute;
+	top: 0;
+	text-align: center;
+	line-height: 120px;
+	color: rgb(136, 136, 136);
+	text-shadow: 1px 1px 1px white;
+	opacity: 0;
+	transform: scale(0) rotate(0);
+	transition: .3s;
+}
+
+.gallery li a:hover span{
+	opacity: 1;
+	transition: .3s;
+	transform: scale(1) rotate(360deg);
+}
+
+.clear{
+	clear: both;
+}
