@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Tipe data Array di Js</h1>
+    <p id="mobil"></p>
+    <p id="hasil"></p>
+    <script>
+        const transport = ["mobil","motor","transport","kereta"];
+
+        //memanggil semua data array
+        document.getElementById("hasil").innerHTML = transport;
+        console.log(transport);
+        //memasukan data ke html
+        document.getElementById("mobil").innerText = transport[0];
+    </script>
+</body>
+</html>

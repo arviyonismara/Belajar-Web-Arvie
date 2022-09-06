@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        document.writeln("Arvie Arvearie Yonismara");
+        document.writeln("</br>");
+        document.writeln("Front End Developer")
+        document.writeln("</br></br>");
+        
+        //manipulasi string
+        document.writeln("Nama  : "+"Arvie");
+        document.writeln("</br>");
+        document.writeln("Chanel    : " + "Front end Dev");
+        document.writeln("</br>");
+        
+        //Escape Sequence
+        document.writeln("<textarea cols='100' rows='10'>");
+        document.writeln("Arvie \nArvearie \nYonismara"); //\n untuk baris baru
+        document.writeln("\\Rumah \\kepulangan"); //\\ untuk menulis \
+        document.writeln("\"Front end Dev\""); //\" untuk menulis "
+        document.writeln("Belajar \tJavascript") //\t untuk menambah tab
+        document.writeln("Belajar \bJavascript") //\b untuk menambah backspace
+        document.writeln("\u2942") //\uXXX untuk lambang unicode
+        document.writeln("</textarea>");
+
+        //membandingkan string
+        document.writeln("</br>")
+        document.writeln("shandika galih" == "Shandika galih")
+        
+        //mengetahui jumlah character suatu kata / kalimat
+        document.writeln("</br>")
+        var nama = "Arvie Arvearie Yonismara"
+        document.writeln(nama.length)
+        //Note : spasi juga dihitung sebagai karakter
+
+    </script>
+</body>
+</html>

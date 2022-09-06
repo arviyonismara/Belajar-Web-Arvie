@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // operator aritmatika
+        // penjumlahan
+        document.writeln(5 + 10 +"</br>")
+        // pengurangan
+        document.writeln(10 - 5 +"</br>")
+        //perkalian
+        document.writeln(5 * 10 + "</br>")
+        // pembagian
+        document.writeln(5 / 10 + "</br></br>")
+        // bobot operator aritmatika () * / + -
+
+        //operator assignment (=)
+        x = 10
+        document.writeln(x)
+        document.writeln("</br>")
+        x = 200
+        document.writeln(x)
+        y = 100
+        x += y
+        document.writeln("</br>")
+        document.writeln(x)
+        x -= y
+        document.writeln("</br>")
+        document.writeln(x)
+        x *= y
+        document.writeln("</br>")
+        document.writeln(x)
+        x /= y
+        document.writeln("</br></br>")
+        document.writeln(x)
+
+        // operator perbandingan
+        a = 10
+        b = 15
+        document.writeln("</br>")
+        document.writeln(a == b)
+        document.writeln("</br>")
+        document.writeln(a != b)
+        document.writeln("</br>")
+        document.writeln(a <= b)
+        document.writeln("</br>")
+        document.writeln(a >= b)
+        document.writeln("</br>")
+        document.writeln(10 == "10") // operator perbandingan biasa akan menghasilkan true
+        document.writeln("</br>")
+        document.writeln(10 === "10" + "</br></br>") // === operator perbandingan strict lebih akurat
+        
+        //operator logika (&&, ||, !)
+        x = 5
+        document.writeln("</br>")
+        document.writeln((x%2 == 0)&&(x>10)) // && untuk dan
+        document.writeln("</br>")
+        document.writeln((x%2 == 0)||(x<10)) // || untuk atau
+        
+        // operator typeof
+        document.writeln("</br></br>")
+        document.writeln(typeof(10))
+        document.writeln(typeof(10.5))
+        document.writeln(typeof("a"))
+        document.writeln(typeof(false))
+        
+        //operator kondisional
+        //(kondisi) ? true : false
+        //contoh
+        document.writeln("</br></br>")
+        z = 10
+        y = (z%2 == 0) ? "benar" : "salah" //jika kondisi benar maka output "benar", jika salah maka output "salah"
+        document.writeln(y)
+
+
+    </script>
+</body>
+</html>

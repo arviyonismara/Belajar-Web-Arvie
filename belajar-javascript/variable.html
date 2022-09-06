@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="num1"></p>
+    <p id="phi"></p>
+    <p id="minus"></p>
+    <script>
+        /*var*/
+        var x; //ini deklarasi dan inisialisasi
+        x = 20; //ini adalah asignment nilai ke variable x
+        //shorthand
+        var nama = "Arvie",
+        umur = 20,
+        asal = "Semarang";
+
+        /*const : digunakan untuk variable yang tidak akan dirubah nilainya*/ 
+        const num1 = 5; 
+        const phi = 3.14;
+        let minus = -2000;
+
+        //cara chek tipedata
+        // bisa pakai typeof(nama_variabel)
+
+        console.log(typeof num1, num1);
+        console.log(typeof phi, phi);
+        console.log(typeof minus, minus);
+
+        minus = 200;
+
+        document.getElementById("num1").innerText = num1; //ini untuk menambilkan variable ke html web
+        document.getElementById("phi").innerText = phi;
+        document.getElementById("minus").innerText = minus;
+    </script>
+</body>
+</html>
