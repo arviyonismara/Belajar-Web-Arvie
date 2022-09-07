@@ -9,22 +9,32 @@
 <body>
     <script>
         // function pada javascript
-        function jumlahVolumeDuaKubus (a, b){
-            var volumeA;
-            var volumeB;
-            var total;
+        // function jumlahVolumeDuaKubus (a, b){
+        //     var volumeA;
+        //     var volumeB;
+        //     var total;
 
-            volumeA = a * a * a;
-            volumeB = b * b * b;
+        //     volumeA = a * a * a;
+        //     volumeB = b * b * b;
 
-            total = volumeA + volumeB;
+        //     total = volumeA + volumeB;
 
-            return total;
+        //     return total;
 
+        // }
+
+        let result = ""
+        for (let i = 1; i <= 20; i++){
+            if (i % 5 === 0){
+                result += " ";
+            }
+            else{
+                result += "O";
+            }
         }
+        console.log(result)
 
-        console.log(jumlahVolumeDuaKubus(5, 8));
-        alert(jumlahVolumeDuaKubus(5, 8));
+        // alert(jumlahVolumeDuaKubus(5, 8));
     </script>
 </body>
 </html>
