@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // else if di Javascript hampir sama dengan python
+        // contoh angkot
+        var jumlahangkot = 10
+        var angkotBeroprasi = 6
+
+        for (var angkot = 1; angkot <= jumlahangkot; angkot++){
+            if (angkot <=6 && angkot != 5){
+                console.log("Angkot no." + angkot + " beroprasi dengan baik.")
+            }
+            // else if (angkot == 8){
+            //     console.log("Angkot no." + angkot + " sedang lembur.")
+            // }
+            // else if (angkot == 10){
+            //     console.log("Angkot no." + angkot + " sedang lembur.")
+            // }
+            else if (angkot == 8 || angkot == 10 || angkot == 5){
+                console.log("Angkot no." + angkot + " sedang lembur.")
+            }
+            else{
+                console.log("Angkot no." + angkot + " sedang tidak beroprasi.")
+            }
+        }
+    </script>
+</body>
+</html>
