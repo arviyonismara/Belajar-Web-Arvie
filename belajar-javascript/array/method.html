@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Array Method
+        var arr = ["Shandika", "Arvie", "Rizal"]
+
+        // 1. join
+        // console.log(arr.join('-')) menambahkan tanda di sela2 array
+
+        // 2. push
+        // arr.push("Bapul") menambahkan elemen index terakhir pada array
+
+        // 3. pop
+        // arr.pop() menghapus index terakhir pada array
+
+        
+        // 4. unshift
+        // arr.unshift('Doddy') menambahkan elemen ke index ke 0
+        
+        // 5. shift
+        // arr.shift() menghapus elemen index ke 0
+
+        // 6. splice (bisa menghapus dan menambah elemen sesuai yang kita tentukan)
+        // splice(indexAwal, maudihapusberapa, elemenbaru1, elemenbaru2,...)
+        // arr.splice(2, 0, "Doddy", "Fitri")
+        // arr.splice(0, 2) maka shandika & arvie tterhapus
+        
+        // 7. slice
+        // slice(awal, akhir);
+        var arr2 = arr.slice(0, 2); // artinya menghapus index diluar yang sudak ditentukan
+        console.log(arr2)
+        
+        // console.log(arr)
+    </script>
+</body>
+</html>

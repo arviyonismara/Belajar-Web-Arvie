@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // manipulasi Array
+        // 1. Menambah isi array
+        // var arr = ['a', 1, true]
+        // console.log(arr) // array akan tampil sebagai object
+        
+        //mengisi
+        var arr = [];
+        arr[0] = "arvie"
+        arr[1] = "arvearie"
+        arr[2] = "Yonismara"
+        
+        console.log(arr)
+        
+        // 2. menghapus isi array
+        var isi = ['a', 1, true]
+        isi[1] = undefined;
+        console.log(isi)
+        
+        //3. Menapilkan isi array
+        var nama = ["Arvie", "Arvearie", "Yonismara"];
+
+        for (var i = 0; i < nama.length; i++){
+            console.log('Mahasiswa ke-' + i + ":" + nama[i])
+        }
+
+    </script>
+</body>
+</html>
