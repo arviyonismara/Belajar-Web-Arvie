@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Membuat Object
+        // 1. object Literal
+        var mhs1 = {
+            nama : "Arvie Yonismara",
+            nim : "A11202012792",
+            email : "arviyonismara@gmail.com",
+            jurusan : "Teknik Informatika"
+        }
+        var mhs2 = {
+            nama : "Bima Rakajati",
+            nim : "A11202013888",
+            email : "bimaRakajati@gmail.com",
+            jurusan : "Teknik Informatika"
+        }
+
+        console.log(mhs1)
+        console.log(mhs2)
+
+        // 2. Function Declaration (ini mirip methode __init__ pada python)
+        // jadi objek beserta variablenya sudah di deklarasikan di awal sehingga menjadi template untuk objek yang akan dibuat
+        function buatObjectMahasiswa(nama, nim, email, jurusan){
+            var mhs = {};
+            mhs.nama = nama;
+            mhs.nim = nim;
+            mhs.email = email;
+            mhs.jurusan = jurusan;
+            return mhs;
+        }
+
+        var mhs3 = buatObjectMahasiswa("Bapul", "A122345847393", "Bapul@gmail.com", "Teknik Informatika");
+        console.log(mhs3)
+        
+        // 3. Constructor
+        function Mahasiswa(nama, nim, email, jurusan){
+            this.nama = nama;
+            this.nim = nim;
+            this.email = email
+            this.jurusan = jurusan;
+        }
+        var mhs4 = new Mahasiswa("Rizal", "A122345847388", "rizaal@gmail.com", "Teknik Informatika");
+        console.log(mhs4)
+
+    </script>
+</body>
+</html>

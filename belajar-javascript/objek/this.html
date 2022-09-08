@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // this
+        // this adalah sebuah keyword spesial yang secara otomatis didefinisikan di setiap function
+        // console.log(this)
+
+        // contoh 1
+        // function halo(){
+        //     console.log(this);
+        //     console.log("halo")
+        // }
+        // this.halo();
+        // // this mengembalikan object global
+
+        // contoh 2 - object literal
+        var obj = {a : 10, nama : 'Shandika'};
+
+        obj.halo = function(){
+            console.log(this);
+            console.log('Halo');
+        }
+        obj.halo();
+        // this mengembalikan object yang bersangkutan
+
+        //contoh 3 - constructor
+        function Halo(){
+            console.log(this);
+            console.log('halo');
+        }
+        var obj1 = new Halo();
+        var obj2 = new Halo();
+        // this mengembalikkan object yang bari dibuat
+    </script>
+</body>
+</html>
