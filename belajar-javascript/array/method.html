@@ -10,23 +10,23 @@
     <script>
         // Array Method
         var arr = ["Shandika", "Arvie", "Rizal"]
-
+        
         // 1. join
         // console.log(arr.join('-')) menambahkan tanda di sela2 array
-
+        
         // 2. push
         // arr.push("Bapul") menambahkan elemen index terakhir pada array
-
+        
         // 3. pop
         // arr.pop() menghapus index terakhir pada array
-
+        
         
         // 4. unshift
         // arr.unshift('Doddy') menambahkan elemen ke index ke 0
         
         // 5. shift
         // arr.shift() menghapus elemen index ke 0
-
+        
         // 6. splice (bisa menghapus dan menambah elemen sesuai yang kita tentukan)
         // splice(indexAwal, maudihapusberapa, elemenbaru1, elemenbaru2,...)
         // arr.splice(2, 0, "Doddy", "Fitri")
@@ -34,9 +34,59 @@
         
         // 7. slice
         // slice(awal, akhir);
-        var arr2 = arr.slice(0, 2); // artinya menghapus index diluar yang sudak ditentukan
-        console.log(arr2)
+        // var arr2 = arr.slice(0, 2); // artinya menghapus index diluar yang sudak ditentukan
+        // console.log(arr2)
         
+        // 8. forEach
+        // untuk menampilkan array tanpa looping
+        // var angka = [1,2,3,4,5,6,7,8];
+        // angka.forEach(function(e){ // e untuk parameter penampung
+        //     console.log(e)
+        // })
+
+        // contoh lain
+        // var nama = ["Shandika", "Arvie", "Rizal"]
+        // nama.forEach(function(e, i){ // menambah parameter i untuk index
+        //     console.log("nama ke-"+ (i+1) +" adalah "+ e)
+        // })
+
+        // 9. map
+        // var angka = [1,2,5,6,8,3,5,7];
+        // var angka2 = angka.map(function(e){
+        //     return e * 2; //artinya seluruh elemen akan dikalikan dua kemudian dikembalikan ke variable nilai angka2
+        // })
+        // console.log(angka2)
+
+        // 10. sort
+        // untuk mengurutkan array dari nilai terkecil ke terbesar
+        // var angka = [1,2,5,6,8,3,5,7];
+        // angka.sort();
+        // console.log(angka)
+        
+        // var angka2 = [1,2,10,5,20,3,5,7,2,3]; //array angka2 ini jika disort biasa maka akan mengurutkan dari nilai depan yang kecil, maka urutannya kacau
+        // // dengan begitu harus diakali
+        // angka2.sort(function(a,b){
+        //     return a-b;
+        // })
+        // console.log(angka2)
+
+        // 11. filter
+        // filter mengembalikan banyak nilai
+        var angka = [1,2,10,5,20,3,5,7,2,3];
+        var angka2 = angka.filter(function(x){
+            // return x === 5; //memfilter / mencari array sesuai kondisi
+            return x > 2;
+        })
+        console.log(angka2)
+
+        // 12. find
+        // find hanya mengembalikan 1 nilai
+        var angka = [1,2,10,5,20,3,5,7,2,3];
+        var angka2 = angka.find(function(x){
+            // return x === 5; //memfilter / mencari array sesuai kondisi
+            return x > 2;
+        })
+        console.log(angka2)
         // console.log(arr)
     </script>
 </body>
