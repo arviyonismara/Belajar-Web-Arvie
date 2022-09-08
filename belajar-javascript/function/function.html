@@ -23,17 +23,32 @@
 
         // }
 
-        let result = ""
-        for (let i = 1; i <= 20; i++){
-            if (i % 5 === 0){
-                result += " ";
-            }
-            else{
-                result += "O";
-            }
-        }
-        console.log(result)
+        // Refactoring (menyederhanakan code agar lebih efisien)
+        // contoh dari fungsi diatas
+        function jumlahVolumeDuaKubus (a, b){
+            //menghilangkan variable2 yang tidak perlu
+            return a*a*a + b*b*b
 
+        }
+
+        console.log(jumlahVolumeDuaKubus(5, 8))
+
+        // fungsi ketika jumlah parameter lebih bnayak dari inputan
+        // maka fungsi akan tetap berjalan dengan hanya inputan yang ada
+        function tambah(a,b,c){
+            return a + b
+        }
+        var coba = tambah(5,10);
+        console.log(coba)
+        
+        // fungsi ketika jumlah parameter kurang dari jumlah inputan
+        // maka fungsi juga akan tetap berjalan sesuai jumlah parameter dan inputan
+        function tambah(a,b){
+            return a + b
+        }
+        var coba = tambah(5,10,4);
+        console.log(coba)
+        
         // alert(jumlahVolumeDuaKubus(5, 8));
     </script>
 </body>

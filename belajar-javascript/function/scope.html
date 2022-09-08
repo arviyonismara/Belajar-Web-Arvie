@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // global scope / window scope / global variable
+        var a = 1;
+
+        function tes(){
+            // function scope
+            var b = 2;
+            console.log(a) //mengakses variable global
+        }
+
+        tes();
+    </script>
+</body>
+</html>
