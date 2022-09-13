@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // rest parameter adalah fitur dimana kita bisa mengirim data bnayak pada satu parameter dan secara otomatis akan dikonversi menjadi array
+        // rest parameter hanya bisa di posisi terakhir, tidak boleh berada di parameter pertama atau tengah
+        // rest parameter ditandai dengan titk tiga (...nama_parameter) didepan nama parameter
+
+        function sum(name, ...data){
+            let total = 0
+            for (const item of data){
+                total += item;
+            }
+            console.log("total " + name + " is " + total)
+        }
+
+        sum("sum1",2,3,4,5)
+
+    </script>
+</body>
+</html>
