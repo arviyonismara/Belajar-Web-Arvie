@@ -10,6 +10,7 @@
     <script>
         // this
         // this adalah sebuah keyword spesial yang secara otomatis didefinisikan di setiap function
+        // kata this adalah referensi ke object milik siapa
         // console.log(this)
 
         // contoh 1
@@ -21,7 +22,10 @@
         // // this mengembalikan object global
 
         // contoh 2 - object literal
-        var obj = {a : 10, nama : 'Shandika'};
+        var obj = {
+            a : 10, 
+            nama : 'Shandika'
+        };
 
         obj.halo = function(){
             console.log(this);

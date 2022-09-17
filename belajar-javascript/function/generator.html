@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // function generator 
+        // digunakan untuk membuat data generator
+        // ditandai dengan tanda * (bintang) setelah kata function
+        // generator itu iterable tetapi bukan array
+
+        // yield adalah generator 
+
+        // data generator itu bersifat lazy
+        // jika yield sebelumnya tidak dieksekusi maka yield selanjutnya tidak akan berjalan
+
+        function* createNames(){
+            yield "Arvie"
+            yield "Arvearie"
+            yield "Yonismara"
+        }
+
+        const names = createNames()
+        // console.log(names[0]) tidak bisa akses index karena bukan array
+        for (const name of names){
+            console.log(name)
+        }
+
+        // contoh kasus
+        function* buatGanjil(value){
+            for(let i = 1; i<= value; i++){
+                if (i % 2 === 1){
+                    yield i // data ditampung di yield i
+                }
+            }
+        }
+
+        const ganjil = buatGanjil(100)
+        for (const angka of ganjil){
+            console.log(angka)
+        }
+
+    </script>
+</body>
+</html>
