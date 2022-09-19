@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latihan This</title>
+</head>
+<body>
+    <script>
+        // Latihan this Javascript
+
+        function Angkot(sopir, trayek, penumpang, kas){
+            this.sopir = sopir;
+            this.trayek = trayek;
+            this.penumpang = penumpang;
+            this.kas = kas;
+
+            // membuat objek method untuk penumpang naik
+            this.penumpangNaik = function(namaPenumpang){
+                this.penumpang.push(namaPenumpang) // namaPenumpang akan di tambahkan kedalam array penumpang;
+                return this.penumpang // kembalikan penumpang
+            }
+            // membuat objek method untuk penumpang turun
+            // buat dua parameter untuk namaPenumpang dan bayar
+            this.penumpangTurun = function(namaPenumpang, bayar){
+                if(this.penumpang === 0){ // chek kondisi jika angkot kosong
+                    alert('angkot masih kosong')
+                    return false;
+                }
+                // buat perulangan untuk mengecheck array penumpang
+                for(var i= 0; i<this.penumpang.length; i++){
+                    if(this.penumpang[i] === namaPenumpang){ // buat kondisi jika nama penumpang di array penumapng sama dengan namaPenumpang
+                        this.penumpang[i] = undefined; // hapus penumpang ketika kondisi terpenuhi
+                        this.kas += bayar; // uang bayar di assign kedalam kas
+                        return this.penumpang; // kembalika penumpang
+                    }
+                }
+            }
+            
+        }
+
+        var angkot1 = new Angkot("Arvie", ['Genuk','Penggaron'],[], 0)
+        angkot1.penumpangNaik('Nigger') // tambahkan penumpang
+        angkot1.penumpangNaik('Dodi') // tambahkan penumpang
+        angkot1.penumpangTurun('Dodi',2500)
+        var angkot2 = new Angkot("Bima", ['Simpang','Pedurungan'],[], 0)
+    </script>
+</body>
+</html>
