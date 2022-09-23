@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hero</title>
+</head>
+<body>
+    <script>
+        function Hero(nama, health, attack, deffense, ags){
+            this.nama = nama;
+            this.health = health;
+            this.attack = attack;
+            this.deffense = deffense;
+            this.ags = ags;
+
+            this.serang = function(lawan){
+                console.log(this.nama + " menyerang " + Lawan.nama)
+		        Lawan.diserang(this.power)
+            }
+
+            this.diserang = function(lawan, damage){
+                console.log(this.name + " diserang "+ Lawan.name)
+                attack_received = damage / this.deffense
+                print("Serangan terasa : " + attack_received)
+                this.health -= attack_received
+                print("darah " + this.nama + " tersisa " + this.health)
+            }
+        }
+
+        const hero1 = new Hero("Arvie", 100, 20, 40, 30)
+        const hero2 = Hero("Jett", 60, 30, 20, 35)
+
+        hero1.serang(hero2)
+    </script>
+</body>
+</html>
