@@ -14,6 +14,7 @@ tAcakWarna.setAttribute('type', 'button')
 tAcakWarna.appendChild(teksTombol)
 tUbahWarna.after(tAcakWarna)
 
+// buat event listener untuk click acak warna
 tAcakWarna.addEventListener('click', function(){
     const r = Math.round(Math.random() * 255 + 1); // rumus untuk mendapatkan nilai 1 sampai 255 adalah * 255 + 1
     // console.log(r)
@@ -22,21 +23,24 @@ tAcakWarna.addEventListener('click', function(){
     document.body.style.backgroundColor = 'rgb('+ r +','+ g +','+ b +')' // set value rgb menjadi variable random r, g, & b
 })
 
-const sMerah = document.querySelector('input[name=sMerah]')
+const sMerah = document.querySelector('input[name=sMerah]') // ambil element sMerah
 const sHijau = document.querySelector('input[name=sHijau]')
 const sBiru = document.querySelector('input[name=sBiru]')
 
-sMerah.addEventListener('input', function(){
+// buat event untuk sMerah
+sMerah.addEventListener('input', function(){ // event input berfungsi ketika menggeser slider, maka warna akan otomatis berubah
     const r = sMerah.value;
     document.body.style.backgroundColor = 'rgb('+r+', 100, 100)'
 })
 
+// buat event untuk sHijau
 sHijau.addEventListener('input', function(){
     const r = sMerah.value;
     const g = sHijau.value;
     document.body.style.backgroundColor = 'rgb('+r+', '+ g +', 100)'
 })
 
+// buat event untuk sBiru
 sBiru.addEventListener('input', function(){
     const r = sMerah.value;
     const g = sHijau.value;
@@ -44,6 +48,7 @@ sBiru.addEventListener('input', function(){
     document.body.style.backgroundColor = 'rgb('+r+', '+ g +', '+ b +')'
 })
 
+// event ketika kursor mouse bergerak didalam body, maka warna akan berubah sesuai pergrakan mouse
 document.body.addEventListener('mousemove', function(){
     //posisi mouse
     // console.log(event.clientY)

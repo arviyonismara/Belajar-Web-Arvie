@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 4. membuat object.create()
+        const methodMahasiswa = {
+            makan : function(porsi){
+                this.energi += porsi;
+                console.log(`Halo ${this.nama}, Selamat Makan!!`);
+            },
+            
+            main : function(){
+                this.energi -= 5;
+                console.log(`Halo ${this.nama}, Selamat Bermain!!`);
+            }
+        }
+
+
+        function Mahasiswa(nama, energi){
+            let mhs = Object.create(methodMahasiswa); // buat objek dengan Object.create() dengan parameter bersisi objek methodMahasiswa
+            // fungsinya adalah agar ketika ada method baru kita tidak perlu mendaftarkan method2 makan, main, dll kedalam object mhs
+            // hal ini seperti mewariskan objek methodMahasiswa kedalam object mhs
+            // maka jika ada method baru akan secara otomatis terdeteksi oleh object mhs 
+            mhs.nama = nama;
+            mhs.energi = energi;
+            // mhs.makan = methodMahasiswa.makan; //panggil objek method makan dari objek methodMahasiswa
+            // mhs.main = methodMahasiswa.main; // karena menggunakan Object.create(methodMahasiswa) maka tidak perlu mendefinisikan method di dalam function Mahasiswa
+
+            return mhs;
+        }
+
+    </script>
+</body>
+</html>

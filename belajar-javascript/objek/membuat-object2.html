@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Cara membuat Object pada Javascript
+
+        // 1. object literal
+        // Problemnya adalah tidak efektif untuk objeknya banyak
+
+        // let mahasiswa = {
+        //     nama : "Arvie",
+        //     energi : 10,
+        //     makan : function(porsi){
+        //         this.energi = this.energi + porsi;
+        //         console.log(`Halo ${this.nama}, Selamat Makan!!`)
+        //     }
+        // }
+        
+        // mahasiswa.makan(2);
+        // console.log(mahasiswa.energi)
+        
+        // 2. function declaration
+        // problemnya adalah walaupun sebuah method tidak digunakan, method tersebut akan tetap berjalan dibelakang layar
+        // tidak efektif untuk memori
+
+        // cara mengakalinya
+        // membuat objek berisi method method yang sebelumnya
+        const methodMahasiswa = {
+            makan : function(porsi){
+                this.energi += porsi;
+                console.log(`Halo ${this.nama}, Selamat Makan!!`);
+            },
+            
+            main : function(){
+                this.energi -= 5;
+                console.log(`Halo ${this.nama}, Selamat Bermain!!`);
+            }
+        }
+
+        function Mahasiswa(nama, energi){
+            let mhs = {}; // deklarasikan dulu bahwa kita ingin membuat objek (mhs) diisi dengan objek kosong {}
+            mhs.nama = nama;
+            mhs.energi = energi;
+            mhs.makan = methodMahasiswa.makan; //panggil objek method makan dari objek methodMahasiswa
+            mhs.main = methodMahasiswa.main;
+            
+            // mhs.makan = function(porsi){
+            //     this.energi += porsi;
+            //     console.log(`Halo ${this.nama}, Selamat Makan!!`);
+            // }
+            
+            // mhs.main = function(){
+            //     this.energi -= 5;
+            //     console.log(`Halo ${this.nama}, Selamat Bermain!!`);
+            // }
+            // function declaration harus menggunakan return
+            return mhs;
+        }
+
+        let Arvie = Mahasiswa('Arvie', 10) // cara buat objek baru menggunakan function declaration
+        let Bapul = Mahasiswa('Bapul', 10) // cara buat objek baru menggunakan function declaration
+
+        Arvie.makan(4);
+        Bapul.main();
+        // mirip seperti OOP python
+
+
+        // 3. constructor function
+        // keyword new
+        function Mahasiswa(nama, energi){
+            this.nama = nama;
+            this.energi = energi;
+            
+            this.makan = function(porsi){
+                this.energi += porsi;
+                console.log(`Halo ${this.nama}, Selamat Makan!!`);
+            }
+            
+            this.main = function(){
+                this.energi -= 5;
+                console.log(`Halo ${this.nama}, Selamat Bermain!!`);
+            }
+        }
+
+        let Dani = new Mahasiswa('Dani', 20)
+    </script>
+</body>
+</html>
