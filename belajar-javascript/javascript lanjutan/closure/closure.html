@@ -15,22 +15,75 @@
         // program counter
         // let counter = 0; counter seperti ini cacat
 
-        let add = function () {
-            // let counter = 0; counter disini juga cacat karena melakukan satu kali proses saja
-            // return ++counter
-            let counter = 0
-            return function(){
-                return ++counter;
+        // let add = function () {
+        //     // let counter = 0; counter disini juga cacat karena melakukan satu kali proses saja
+        //     // return ++counter
+        //     let counter = 0
+        //     return function(){
+        //         return ++counter;
+        //     }
+        // }
+
+        // // counter = 5 ini dapat menggangggu counternya
+        // let a = add()
+
+        // console.log(a())
+        // console.log(a())
+        // console.log(a())
+        // console.log(a())
+
+        // contoh ke 2
+
+        function greeting() {
+            let message = 'Hi';
+
+            function sayHi() {
+                console.log(message);
             }
+
+            sayHi();
         }
 
-        // counter = 5 ini dapat menggangggu counternya
-        let a = add()
+        greeting();
 
-        console.log(a())
-        console.log(a())
-        console.log(a())
-        console.log(a())
+        // The greeting() function creates a local variable named message and a function named sayHi().
+
+        // The sayHi() is the inner function that is available only within the body of the greeting() function.
+
+        // The sayHi() function can access the variables of the outer function such as the message variable of the greeting() function.
+
+        // Inside the greeting() function, we call the sayHi() function to display the message Hi.
+
+        // Let’s modify the greeting() function:
+        function greeting() {
+            let message = 'Hi';
+
+            function sayHi() {
+                console.log(message);
+            }
+
+            return sayHi;
+        }
+        let hi = greeting();
+        hi(); // still can access the message variable
+
+        // Now, instead of executing the sayHi() function inside the greeting() function, the greeting() function returns the sayHi() function object.
+
+        // Note that functions are the first-class citizens in JavaScript, therefore, you can return a function from another function.
+
+        // Outside of the greeting() function, we assigned the hi variable the value returned by the greeting() function, which is a reference of the sayHi() function.
+
+        // Then we executed the sayHi() function using the reference of that function: hi(). If you run the code, you will get the same effect as the one above.
+
+        // However, the interesting point here is that, normally, a local variable only exists during the execution of the function.
+
+        // It means that when the greeting() function has completed executing, the message variable is no longer accessible.
+
+        // In this case, we execute the hi() function that references the sayHi() function, the message variable still exists.
+
+        // The magic of this is closure. In other words, the sayHi() function is a closure.
+
+        // A closure is a function that preserves the outer scope in its inner scope.
 
     </script>
 </body>

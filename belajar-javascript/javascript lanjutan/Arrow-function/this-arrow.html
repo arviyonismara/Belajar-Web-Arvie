@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>This Arrow</title>
+</head>
+<body>
+    <script>
+        // Konsep this pada Arrow Function
+
+        // Constructor function
+        // const Mahasiswa = function(){
+        //     this.nama = 'Shandika';
+        //     this.umur = 33;
+        //     this.sayHello = function(){
+        //         console.log(`Halo, nama saya ${this.nama}, dan saya ${umur} tahun`)
+        //     }
+        // }
+        // const shandika = new Mahasiswa();
+
+        // bentuk Arrow function
+
+        // const Mahasiswa = function(){
+        //     this.nama = 'Shandika';
+        //     this.umur = 33;
+        //     this.sayHello = () => {
+        //         console.log(`Halo, nama saya ${this.nama}, dan saya ${umur} tahun`)
+        //     }
+        // }
+        // const shandika = new Mahasiswa();
+
+        // Object Literal
+        // const mhs1 = {
+        //     nama : "Arvie",
+        //     umur : 20,
+        //     sayHello: () => {
+        //         // console.log(`Halo, nama saya ${this.nama}, dan saya ${umur} tahun`)
+        //         // akan muncul error karena arrow function tidak mengenal konsep this
+        //         //    console.log(this) //this tidak merefer ke mhs1
+        //     }
+        // } // akan muncul error 
+
+
+         const Mahasiswa = function(){
+            this.nama = 'Arvie';
+            this.umur = 20;
+            this.sayHello = () => {
+                console.log(`Halo, nama saya ${this.nama}, dan saya ${umur} tahun`)
+            },
+
+            // setInterval(function(){ jika menggunakan function biasa kana muncul undefined
+            //     console.log(this.umur++) // karena this disini merefer ke window
+            // }, 500)
+            setInterval( () => { // karena arrow tidak memiliki konsep this, maka
+                console.log(this.umur++) // this disini akan merefer ke lexical scope diatas
+            }, 500)
+
+        }
+        const shandika = new Mahasiswa();
+    </script>
+</body>
+</html>

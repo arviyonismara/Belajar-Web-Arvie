@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrow function</title>
+</head>
+<body>
+    <script>
+        // normal Function
+        // let tampilPesan = function (nama){
+        //     alert('halo' + nama);
+        // }
+        // tampilPesan('Shandika');
+
+        // Arrow Function
+
+        // contoh satu parameter
+        let tampilNama = (nama) => {
+            return `Hallo ${nama}`;
+        }
+
+        console.log(tampilNama('Arvie'))
+
+        // contoh 2 parameter
+        const tampilPesan = (nama, waktu) => {
+            return `selamat ${waktu} ${nama}`;
+        }
+        console.log(tampilPesan("malam"))
+
+        //implisit return
+        const tampilbulan = bulan => `Bulan ini bulan, ${bulan}`; // tanpa kurung dan kurung kurawal
+        console.log(tampilbulan("Mei"))
+
+        // contoh tanpa parameter
+        // kalau tidak ada parameternya wajib menggunakan kurung buka kurung tutup
+        const tampilHello = () => `Hello World`;
+        console.log(tampilHello())
+
+        // contoh kasus
+        // mengetahui jumlah huruf dalam setiap nama
+        let mahasiswa = ['Dodi', 'Arvie', "Shandika"];
+        
+        // cara biasa
+        
+        // let jumlahHuruf = mahasiswa.map(function(nama){
+        //     return nama.length;
+        // })
+        // console.log(jumlahHuruf)
+
+        // cara Arrow function 1
+        // let jumlahHuruf = mahasiswa.map(nama => nama.length);
+        // console.log(jumlahHuruf);
+
+        // cara Arrow Function 2
+        // mengembalikan hasil menjadi objek
+        let jumlahHuruf = mahasiswa.map(nama => ({
+            nama : nama,
+            jmlHuruf: nama.length
+        }));
+        console.log(jumlahHuruf)
+
+        
+    </script>
+</body>
+</html>
