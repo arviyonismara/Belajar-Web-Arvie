@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Destructuring 
+
+        // 1. destructuring array
+        // const coba = ['satu', 'dua', 'tiga'];
+
+        // const [a, b, c] = coba;
+        // const [a, , c] = coba; // kita bisa skip items
+        // console.log(a)
+        // // console.log(b)
+        // console.log(c)
+        
+        // swap items
+        // let a = 1;
+        // let b = 2;
+        // console.log(a)
+        // console.log(b)
+        // [a, b] = [b, a];
+        // console.log(a)
+        // console.log(b)
+
+        // return value pada function
+        // function coba(){
+        //     return [1, 2]
+        // }
+
+        // const [a, b] = coba()
+        // console.log(b)
+
+        // Rest parameter
+        // const [a, ...values] = [1, 2, 3, 4, 5];
+        // console.log(a)
+        // console.log(values)
+
+
+        // 2. destructuring objek
+        // const mhs = {
+        //     nama : "Arvie",
+        //     umur : 22
+        // }
+
+        // const {nama, umur} = mhs; // nama variable harus sama dengan property objek
+        // console.log(nama) 
+
+        // Assigment tanpa deklarasi objek
+        // ({nama, umur} = {
+        //     nama : "Arvie",
+        //     umur : 20
+        // });
+        // console.log(nama)
+
+        // Assign ke variable baru
+        // const mhs = {
+        //     nama: 'Shandika Galih',
+        //     umur: 20
+        // }
+        // const {nama : n, umur: u} = mhs;
+        // console.log(n)
+
+        // Memberikan Default value
+        // mhs = {
+        //     nama : "Arvie",
+        //     umur : 22,
+        //     // email : 'bapul@gmail.com' // akan mengutamakan yang berada di objek
+        // }
+
+        // const {nama, umur = u, email= 'arvi@gmail.com'} = mhs; // nama variable harus sama dengan property objek
+        // console.log(email) 
+
+        // Rest parameter objek
+        // mhs = {
+        //     nama : "Arvie",
+        //     umur : 22,
+        //     email : 'bapul@gmail.com' // akan mengutamakan yang berada di objek
+        // }
+
+        // const{nama, ...value} = mhs;
+        // console.log(value)
+
+        // Mengambil field pada object, setelah dikirim sebagai parameter untuk function
+        const mhs = {
+            id:123,
+            nama : "Arvi Yoinsi",
+            umur : 20,
+            email : "nigg@gmail.com"
+        }
+
+        function getIdMhs({id}){ // parameter langsung menggunakan property objek
+            return id;
+        }
+
+        console.log(getIdMhs(mhs))
+    </script>
+</body>
+</html>
