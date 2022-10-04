@@ -15,13 +15,12 @@ let jsLanjut = videos.filter(video => video.textContent.includes('JAVASCRIPT LAN
     const parts = waktu.split(':').map(part => parseFloat(part)); //parseFloat() untuk casting element array dalam part menjadi float
     return (parts[0] * 60) + parts[1]; // kembalikan nilai parts[0]/menit menjadi detik dengan dikali 60
 })
-
 //  jumlahkkan semua detik
 .reduce((total, detik) => total + detik); // menjumlahkan total detik
 
 // ubah formatnya jadi jam menit detik
-const jam = Math.floor(jsLanjut / 3600); 
-jsLanjut = jsLanjut - jam * 3600;
+const jam = Math.floor(jsLanjut / 3600); // 8000 sekian detik / 3600
+jsLanjut = jsLanjut - jam * 3600; 
 const menit = Math.floor(jsLanjut / 60);
 const detik = jsLanjut - menit * 60;
 
@@ -31,6 +30,3 @@ pDurasi.textContent = `${jam} Jam, ${menit} Menit, ${detik} Detik.`;
 const jmlvideo = videos.filter(video => video.textContent.includes('JAVASCRIPT LANJUTAN')).length;
 const pJmlVideo = document.querySelector('.jumlah-video');
 pJmlVideo.textContent = `${jmlvideo} Video.`
-
-
-console.log(detik)
