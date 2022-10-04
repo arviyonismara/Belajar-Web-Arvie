@@ -18,6 +18,32 @@
         function selesai(){ // ini adalah callback dari function kerjakanTugas()
             console.log("tugas sudah selesai");
         }
+
+        // ###contoh higher order function sekaligus abstraksi(penyederhanaan code)
+
+        // ###loop biasa //
+
+        // for (let i = 0; i < 10; i++){
+        //     console.log(i)
+        // }
+
+        // ###loop + abstraksi //
+
+        // function repeatLog(n){
+        //     for (let i = 0; i < n; i++){
+        //         console.log(i)
+        //     }
+        // }
+        // repeatLog(10)
+
+        // ###loop + abstraksi + higher order function //
+        function repeat(n, action){ // menambahkan parameter action untuk menentukan perintah yang nanti akan dijalankan
+            for (let i = 0; i < n; i++){
+                action(i)
+            }
+        }
+        repeatLog(10, console.log)
+        repeatLog(5, alert)
     </script>
 </body>
 </html>

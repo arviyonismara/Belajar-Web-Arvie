@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filter Map & Reduce</title>
+</head>
+<body>
+
+
+    <script>
+        const angka = [-1, 8, 9, 6, 5,-4, 5, 4, 2, 3]
+
+        
+        // mencari agnka >= 3
+        // const newAngka = [];
+        // for (let i = 0; i <= angka.length; i++){
+            //     if (angka[i] >= 3){
+                //         newAngka.push(angka[i]);
+                //     }
+                // }
+                // console.log(newAngka)
+                
+        // Filter //
+        // filter tanpa arrow
+        // const newAngka = angka.filter(function(i){ // parameter function diisi sembarang untuk merepresentasikan angka2 didalam array angka
+        //     return i >= 3;
+        // })
+        // console.log(newAngka)
+
+        // filter with arrow
+        // const newAngka = angka.filter(a => a >= 3);
+        // console.log(newAngka)
+
+        // Map //
+        // kalikan semua angka dengan 2
+        // const newAngka = angka.map(function(a){
+        //     return a * 2
+        // })
+        // console.log(newAngka)
+        // Map with arrow
+        // const newAngka = angka.map(a => a * 2)
+        // console.log(newAngka)
+
+        // Reduce //
+        // menjumlahkan seluruh elemen pada array
+        // const newAngka = angka.reduce((accumulator, currentValue) =>
+        // accumulator + currentValue);
+        // console.log(newAngka)
+
+        // Method chaining
+        // Cari angka > 5
+        // kalikan 3
+        // jumlahkan
+
+        const hasil = angka.filter(a => a > 5) // pertama difilter a > 5
+        .map(a => a * 3) // kemudian dikalikan 3
+        .reduce((acc, curr) => acc + curr); // kemudian jumlahkan seluruh elemen
+
+        console.log(hasil)
+    </script>
+</body>
+</html>
