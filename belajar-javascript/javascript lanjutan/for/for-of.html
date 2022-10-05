@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul>
+        <li class="nama">Arvie</li>
+        <li class="nama">Bima</li>
+        <li class="nama">Dono</li>
+    </ul>
+
+    <script>
+        // for of //
+        // for...of bisa digunakan untuk banyak hal yang iterable
+        // seperti array, String, arguments, NodeList, dll
+        // kelemahanya for...of hanya menerima 1 parameter maka dari itu harus diakali (lihat line: 50)
+
+        // const mhs = ['Arvie', 'Bima', 'Dono'];
+
+        //For biasa
+        // for(let i = 0; i < mhs.length; i++){
+        //     console.log(mhs[i])
+        // }
+
+        //forEach()
+        // mhs.forEach(m => console.log(m))
+
+        // for(const m of mhs){
+        //     console.log(m)
+        // }
+
+        // String
+        // const nama = 'Yonismara';
+        // for(const n of nama){
+        //     console.log(n)
+        // }
+
+        // mhs.forEach((m, i) => {
+        //     console.log(`${m} adalah mahasiswa ke-${i + 1}`)
+        // })
+
+        // for (const m of mhs.entries()){ // output berupa [0, 'Arvie'] dst
+        //     console.log(m)
+        // }
+
+        // cara mengakalinya dengan destrukturing
+        // for(const [i, m] of mhs.entries()){
+        //     console.log(`${m} adalah mahasiswa ke-${i}`)
+        // }
+
+        // Node List
+        const liNama = document.querySelectorAll('.nama');
+        // liNama.forEach( n => console.log(n.textContent))
+        // for( n of liNama){
+        //     console.log(n.innerHTML)
+        // }
+
+        // arguments
+        function jumlahkanAngka(){
+            // return arguments.reduce((a,i) => a + i);
+            // arguments.forEach(a => jumlah += a)
+            let jumlah = 0;
+            for (a of arguments){
+                jumlah += a;
+            }
+            return jumlah
+        }
+
+        console.log(jumlahkanAngka(1, 2, 3, 4, 5))
+
+
+        // for in //
+        // hanya untuk enumerable / property pada objek
+        const mhs = {
+            nama: 'Arvie',
+            nim: 'A11202012792',
+            umur: 20,
+            email: 'arvi@gmail.com'
+        }
+
+        for (const i in mhs){
+            // console.log(i) // seperti ini yang muncul hanya nama propertynya saja
+            // console.log(mhs[i]) // kalau seperti ini yang muncul value nya saja
+            console.log(`${i} : ${mhs[i]}`) // kalau seperti ini muncul keduanya
+        }
+        
+    </script>
+</body>
+</html>
