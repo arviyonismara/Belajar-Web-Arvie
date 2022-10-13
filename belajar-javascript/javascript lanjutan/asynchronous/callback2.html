@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Set Timeout</title>
+    <script>
+      function callback() {
+        console.log("Hello World");
+      }
+
+      function buttonClick() {
+        // Asynchronous
+        // contoh method setTimeOut()
+        // setTimeout(() => {
+        //   callback(); // akan memanggil function callback() setelah waktu lima detik
+        // }, 5000);
+
+        // contoh method setInterval()
+        setInterval(() => {
+          callback(); // akan memanggil function callback secara berkala dalam interval waktu tertentu.
+        }, 2000);
+
+        console.log("Success Click Button"); // ini akan dijalankan terlebih dahulu
+      }
+    </script>
+  </head>
+  <body>
+    <button onclick="buttonClick()">Click Me</button>
+  </body>
+</html>
